@@ -1,0 +1,14 @@
+{
+    "input_patterns": [
+        "^(?P<name>.+)_color\\.(png|jpg)$"
+    ],
+    "model_weights_file":"gear_best.pt",
+    "min_conf": 0.5,
+    "max_det": 3,
+    "iou": 0.5,
+    "input_width": 640,
+
+    "save_debug": true,
+    "show_output": true,
+    "save_output": true
+}

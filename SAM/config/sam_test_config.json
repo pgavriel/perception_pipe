@@ -1,0 +1,8 @@
+{
+    "input_patterns": [
+        "^(?P<name>.+)\\.(png|jpg)$"
+    ],
+    "show_output": true,
+    "save_output": true
+    
+}

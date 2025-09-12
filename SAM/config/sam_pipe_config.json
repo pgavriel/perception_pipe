@@ -1,0 +1,9 @@
+{
+    "input_patterns": [
+        "^(?P<name>.+)_color\\.(png|jpg)$",
+        "^(?P<name>.+)_yolo\\.json$"
+    ],
+    "show_output": false,
+    "save_output": true
+    
+}

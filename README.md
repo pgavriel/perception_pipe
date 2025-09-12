@@ -31,6 +31,7 @@ cd perception_pipe/SAM
 Setup:  
 The [FoundationPose github repo](https://github.com/NVlabs/FoundationPose) will need to be cloned locally, and it's path needs to be included as LOCAL_GIT_DIR in the run_pipe_container.sh script for FoundationPose.  
 `git clone https://github.com/NVlabs/FoundationPose.git`  
+Used the instructions/Dockerfile included in their github repository to build the initial container, and then the Dockerfile in this repository uses that container as a starting point and installs a few dependencies to get the pipe_container functionality.  
   
 To run:  
 ```

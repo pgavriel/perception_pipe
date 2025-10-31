@@ -12,7 +12,7 @@ import matplotlib
 matplotlib.use('TkAgg')
 
 # ---- Config ----
-IMAGE_DIR = "/workspace/data/"#gear1/masks/"  # Update path as needed
+IMAGE_DIR = "/workspace/data"#gear1/masks/"  # Update path as needed
 # MODEL_TYPE = "vit_b"             # or vit_l, depending on what you've downloaded
 # CHECKPOINT = "/workspace/sam2/sam_vit_b.pth"  # Update with actual checkpoint
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -25,7 +25,7 @@ predictor = SAM2ImagePredictor(build_sam2(model_cfg, checkpoint))
 
 
 # ---- Global State ----
-images = sorted(glob.glob(os.path.join(IMAGE_DIR, "*.jpg")))  # or png/tiff/etc.
+images = sorted(glob.glob(os.path.join(IMAGE_DIR, "*.png")))  # or png/tiff/etc.
 index = 0
 points = []
 labels = []
@@ -80,7 +80,7 @@ def save_mask():
     if current_mask is None:
         print("[!] No mask to save")
         return
-    out_path = image_filename.replace(".jpg", "_mask.jpg")  # or .png, etc.
+    out_path = image_filename.replace(".png", "_mask.png")  # or .png, etc.
     cv2.imwrite(out_path, (current_mask * 255).astype(np.uint8))
     print(f"[Saved] {out_path}")
 
